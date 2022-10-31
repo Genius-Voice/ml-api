@@ -1,6 +1,6 @@
 # From machine learning model to API
 
-The main goal of this repo is to provide a simple example of how to build your machine-learning model as an API
+The main goal of this repo is to provide a simple example of how to serve your machine-learning model as an API
 
 ## How to install all requirements
 
