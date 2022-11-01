@@ -13,7 +13,7 @@ app = FastAPI()
 model = pickle.load(open("../models/svm", 'rb'))
 vectorizer = pickle.load(open("../featurizers/sparse_features", 'rb'))
 
-class UserInput(BaseModel):
+class User(BaseModel):
     text: str
     uuid: Optional[str]
     
@@ -75,7 +75,7 @@ def read_root():
     return {"Status": "Ok"}
 
 @app.post("/predict/sentiment")
-def predict_sentiment(user_input: UserInput):
+def predict_sentiment(user_input: User):
     start_time = time.time()
     # Text cleaner
     clean_text = text_preprocessor(user_input.text)
