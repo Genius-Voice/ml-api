@@ -44,6 +44,7 @@ pip install -r requirements.txt
 
 ```
 Open train.ipynb and run this notebook
+Wait until the model is finished training and the objects are saved..
 ```
 
 ### 6. DONE! 
