@@ -25,8 +25,6 @@ def text_preprocessor(sentence):
     """
     # Lowercase
     sentence = sentence.lower()
-    # Remove punctuations
-    sentence = sentence.translate(str.maketrans('', '', string.punctuation))
     # Remove white spaces
     sentence = re.sub(' +', ' ',sentence).strip()
     return sentence
