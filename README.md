@@ -84,3 +84,56 @@ CTRL + C
 ```
 
 
+## Run FastAPI in Docker container
+
+### 1. Docker build image
+Make sure the model is trained and saved in the models directory before proceeding.
+
+```shell
+docker build -t mlapp ./fastapi
+``` 
+wait...
+
+###  2. Docker run container
+
+#### For Windows Users
+```shell
+docker run -p 8000:8000 -v %cd%/models:/app/models -v %cd%/fastapi:/app mlapp
+```
+
+#### For MacOS Users
+```shell
+docker run -p 8000:8000 -v "$(pwd)"/models:/app/models -v "$(pwd)"/fastapi:/app mlapp
+```
+
+###  3. Test the model
+- Open a browser
+- Go to localhost:8000/docs
+
+### Handy Docker commands
+
+##### 1. Show running containers
+```shell
+docker ps
+```
+
+##### 2. Show Docker images
+```shell
+docker images
+```
+
+##### 3. stop container
+```shell
+docker stop [container-id]
+```
+
+##### 4. Remove image
+```shell
+docker rmi [image-id]
+```
+
+or
+
+```shell
+docker rmi -f [image-id]
+```

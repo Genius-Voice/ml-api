@@ -1,0 +1,5 @@
+scikit-learn==1.0.2
+matplotlib==3.6.1
+fastapi==0.85.1
+uvicorn==0.19.0
+embetter[sentence-tfm]==0.2.0
