@@ -1,5 +1,6 @@
 # exclude everything in this folder
 featurizers/*
-models/*
 notebooks/.ipynb_checkpoints/*
 fastapi/__pycache__/*
+gradio/flagged/*
+gradio/.ipynb_checkpoints/*
